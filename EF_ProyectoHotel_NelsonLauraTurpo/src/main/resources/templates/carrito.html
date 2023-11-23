@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Carrito de Reservas</title>
+</head>
+<body>
+    <h1>Carrito de Reservas</h1>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>Habitación</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Total</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="reserva : ${reservasEnCarrito}">
+                <td th:text="${reserva.habitacion.numero}"></td>
+                <td th:text="${reserva.fechaInicio}"></td>
+                <td th:text="${reserva.fechaFin}"></td>
+                <td th:text="${reserva.total}"></td>
+                <td th:text="${reserva.estado}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="/confirmar_reserva" method="post">
+        <input type="submit" value="Confirmar Reserva">
+    </form>
+</body>
+</html>
+

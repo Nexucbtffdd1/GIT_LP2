@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Confirmacion de Reserva</title>
+</head>
+<body>
+  <h1>Confirmacion de Reserva</h1>
+  <p>Su reserva ha sido confirmada.</p>
+  <p>Numero de reserva: <span th:text="${reserva.id}"></span></p>
+  <p>Fecha de inicio: <span th:text="${reserva.fechaInicio}"></span></p>
+  <p>Fecha de fin: <span th:text="${reserva.fechaFin}"></span></p>
+  <p>Total: <span th:text="${reserva.total}"></span></p>
+</body>
+</html>
